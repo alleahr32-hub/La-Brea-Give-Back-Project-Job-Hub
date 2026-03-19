@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>La Brea Job Hub</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f6f9;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(to right, #003366, #0077b6);
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background: #022c43;
+      padding: 10px;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      padding: 20px;
+    }
+
+    h2 {
+      color: #003366;
+    }
+
+    .card {
+      background: white;
+      padding: 15px;
+      margin: 15px 0;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .btn {
+      background: #0077b6;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background: #023e8a;
+    }
+
+    footer {
+      background: #003366;
+      color: white;
+      text-align: center;
+      padding: 10px;
+    }
+
+    input, select {
+      padding: 8px;
+      width: 100%;
+      margin: 5px 0;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>La Brea Job Hub</h1>
+  <p>Connecting Residents to Entry-Level Jobs & Energy Opportunities</p>
+</header>
+
+<nav>
+  <a href="#jobs">Jobs</a>
+  <a href="#programs">Programs</a>
+  <a href="#guidance">Career Guidance</a>
+</nav>
+
+<section id="jobs">
+  <h2>Available Jobs</h2>
+
+  <div class="card">
+    <h3>Field Technician (Entry Level)</h3>
+    <p><strong>Industry:</strong> Oil & Gas</p>
+    <p><strong>Requirements:</strong> CXC Math & English, Safety Certificate</p>
+    <p><strong>Description:</strong> Assist in maintenance of equipment and pipelines.</p>
+    <button class="btn">Apply</button>
+  </div>
+
+  <div class="card">
+    <h3>Solar Panel Installer</h3>
+    <p><strong>Industry:</strong> Renewable Energy</p>
+    <p><strong>Requirements:</strong> Basic Electrical Knowledge, Certification preferred</p>
+    <p><strong>Description:</strong> Install and maintain solar panel systems.</p>
+    <button class="btn">Apply</button>
+  </div>
+
+  <div class="card">
+    <h3>Warehouse Assistant</h3>
+    <p><strong>Industry:</strong> Logistics</p>
+    <p><strong>Requirements:</strong> No experience required</p>
+    <p><strong>Description:</strong> Organize and manage inventory.</p>
+    <button class="btn">Apply</button>
+  </div>
+
+</section>
+
+<section id="programs">
+  <h2>Training & Development Programs</h2>
+
+  <div class="card">
+    <h3>Technical Skills Training Program</h3>
+    <p>Learn welding, electrical work, and mechanical skills.</p>
+  </div>
+
+  <div class="card">
+    <h3>Energy Sector Certification Pathway</h3>
+    <p>Step-by-step certification to move from entry-level to skilled jobs.</p>
+  </div>
+
+  <div class="card">
+    <h3>Youth Apprenticeship Program</h3>
+    <p>Hands-on experience with companies in La Brea.</p>
+  </div>
+
+</section>
+
+<section id="guidance">
+  <h2>Career Guidance & Counseling</h2>
+
+  <div class="card">
+    <h3>Not Sure What to Apply For?</h3>
+    <p>Answer a few questions and get suggestions.</p>
+
+    <label>Do you prefer:</label>
+    <select id="preference">
+      <option value="outdoor">Outdoor Work</option>
+      <option value="indoor">Indoor Work</option>
+    </select>
+
+    <button class="btn" onclick="getAdvice()">Get Advice</button>
+
+    <p id="result"></p>
+  </div>
+
+</section>
+
+<footer>
+  <p>© 2026 La Brea Job Hub | Empowering Our Community</p>
+</footer>
+
+<script>
+  function getAdvice() {
+    let pref = document.getElementById("preference").value;
+    let result = document.getElementById("result");
+
+    if (pref === "outdoor") {
+      result.innerHTML = "You may enjoy jobs like Field Technician or Solar Installer.";
+    } else {
+      result.innerHTML = "You may enjoy jobs like Warehouse Assistant or Office Clerk.";
+    }
+  }
+</script>
+
+</body>
+</html>
